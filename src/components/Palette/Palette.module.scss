@@ -1,0 +1,42 @@
+@use '../../styles/' as *;
+
+.Palette{
+    width: 40%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span{
+        @include box(1rem);
+        border: 2px solid #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        &.black{
+            background-color: black;
+        }
+        &.white{
+            background-color: white;
+        }
+        &.red{
+            background-color: red;
+        }
+        &.orange{
+            background-color: orange;
+        }
+        &.yellow{
+            background-color: yellow;
+        }
+        &.green{
+            background-color: green;
+        }
+        &.blue{
+            background-color: blue;
+        }
+        &.indigo{
+            background-color: indigo;
+        }
+        &.purple{
+            background-color: purple;
+        }
+    }
+}

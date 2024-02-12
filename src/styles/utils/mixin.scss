@@ -1,0 +1,10 @@
+@mixin box($size){
+    width: $size;
+    height: $size;
+}
+
+@mixin center-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
