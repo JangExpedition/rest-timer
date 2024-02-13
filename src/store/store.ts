@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import backgroundColorSlice from "../slice/backgroundColorSlice.ts";
+import backgroundColorSlice from "../slice/colorSlice.ts";
+import timeSlice from "../slice/timeSlice.ts";
 
 const store = configureStore({
     reducer: {
-        backgroundColor: backgroundColorSlice.reducer,
+        color: backgroundColorSlice.reducer,
+        time: timeSlice.reducer,
     },
 });
 

@@ -7,12 +7,11 @@ import { RootState } from "../../store/store.ts"
 
 const Layout = () => {
 
-    const backgroundColor = useSelector((state: RootState)=>state.backgroundColor?.color)
-
-    console.log(backgroundColor);
+    const backgroundColor = useSelector((state: RootState)=>state.color?.backgroundColor)
+    const color = useSelector((state: RootState)=>state.color?.color)
 
     return(
-        <div style={{backgroundColor}}>
+        <div style={{backgroundColor, color}}>
             <Header></Header>
             <Wrapper className="main">
                 <Outlet/>

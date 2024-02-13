@@ -1,4 +1,18 @@
+@use "../../styles/" as *;
+
 .Timer{
+    @include center-box;
+    flex-direction: column;
     width: 100%;
     height: 80%;
+    .time{
+        font-size: 15rem;
+    }
+    .startAndStop{
+        @include box(5rem);
+        @include center-box;
+        font-weight: bold;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 }
