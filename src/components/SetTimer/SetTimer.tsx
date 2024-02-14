@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./SetTimer.module.scss"
 import { useDispatch } from "react-redux";
 import { setMinute, setSecond } from "../../slice/timeSlice.ts";
 
@@ -24,10 +25,12 @@ const SetTimer = () => {
         }
     }
 
-    return <div>
-        <p>시간 : </p>
-        <input id="minute" type="number" onChange={(e)=>timeHandler(e)}></input>분
-        <input id="second" type="number" onChange={(e)=>timeHandler(e)}></input>초
+    return <div className={styles.SetTimer}>
+        <p>시간 </p>
+        <div>
+            <input id="minute" type="number" onChange={(e)=>timeHandler(e)}></input>분
+            <input id="second" type="number" onChange={(e)=>timeHandler(e)}></input>초
+        </div>
     </div>
 }
 

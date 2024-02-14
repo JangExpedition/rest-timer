@@ -6,12 +6,16 @@ import SetTimer from "../../components/SetTimer/SetTimer.tsx";
 const Setting = () => {
     return <div className={styles.Setting}>
         <div className={styles.oneSetting}>
-            <p>배경 색상 : </p>
-            <Palette type={"backgroundColor"}/>
+            <p>배경 색상 </p>
+            <div>
+                <Palette type={"backgroundColor"}/>
+            </div>
         </div>
         <div className={styles.oneSetting}>
-            <p>색상 : </p>
-            <Palette type={"color"}/>
+            <p>색상 </p>
+            <div>
+                <Palette type={"color"}/>
+            </div>
         </div>
         <SetTimer/>
     </div>

@@ -1,3 +1,5 @@
+@use "../base/" as *;
+
 @mixin box($size){
     width: $size;
     height: $size;
@@ -7,4 +9,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin mobile {
+    @media (max-width: #{$breakpoint - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width: $breakpoint){
+        @content;
+    }
 }

@@ -72,7 +72,7 @@ const Timer = () => {
         setMinute(storeMinute);
         setSecond(storeSecond);
         dispatch(backgroundChange(backgroundColor));
-        dispatch(change(color))
+        dispatch(change(color));
         clearInterval(timerId!);
     }
 

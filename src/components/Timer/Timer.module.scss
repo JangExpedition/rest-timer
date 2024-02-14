@@ -5,14 +5,28 @@
     flex-direction: column;
     width: 100%;
     height: 80%;
+    @include mobile{
+        gap: 1rem;
+    }
     .time{
-        font-size: 15rem;
+        @include mobile{
+            font-size: 6rem;
+        }
+        @include desktop{
+            font-size: 15rem;
+        }
     }
     .buttonWrapper{
         @include center-box;
         gap: 3rem;
         .startAndStop{
-            @include box(5rem);
+            @include mobile{
+                @include box(3rem);
+                font-size: 0.7rem;
+            }
+            @include desktop{
+                @include box(5rem);
+            }
             @include center-box;
             font-weight: bold;
             border-radius: 50%;
