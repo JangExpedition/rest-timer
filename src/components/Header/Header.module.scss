@@ -18,9 +18,10 @@
         cursor: pointer;
     }
     .setting{
-        @include box(1.5rem);
+        @include center-box();
+        font-size: 1.5rem;
         cursor: pointer;
-        background-image: url("../../../public/images/setting.png");
-        background-size: 1.5rem;
+        text-decoration: none;
+        color: inherit;
     }
 }

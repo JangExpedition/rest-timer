@@ -8,11 +8,15 @@
     .time{
         font-size: 15rem;
     }
-    .startAndStop{
-        @include box(5rem);
+    .buttonWrapper{
         @include center-box;
-        font-weight: bold;
-        border-radius: 50%;
-        cursor: pointer;
+        gap: 3rem;
+        .startAndStop{
+            @include box(5rem);
+            @include center-box;
+            font-weight: bold;
+            border-radius: 50%;
+            cursor: pointer;
+        }
     }
 }

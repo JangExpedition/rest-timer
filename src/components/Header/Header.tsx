@@ -6,7 +6,7 @@ const Header = () => {
     return(
         <div className={styles.Header}>
             <Link className={styles.home} to={"/"}>Rest Timer</Link>
-            <Link className={styles.setting} to={"/setting"}></Link>
+            <Link className={styles.setting} to={"/setting"}><i className="fa-solid fa-gear"></i></Link>
         </div>
     )
 }
