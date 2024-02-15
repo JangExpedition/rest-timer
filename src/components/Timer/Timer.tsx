@@ -75,7 +75,6 @@ const Timer = () => {
     const resetTimer = () => {
         setMinute(storeMinute);
         setSecond(storeSecond);
-        console.log({userSelectedColor, color});
         if(userSelectedColor !== color){
             dispatch(backgroundChange(color));
             dispatch(change(backgroundColor));
