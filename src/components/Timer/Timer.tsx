@@ -23,6 +23,7 @@ const Timer = () => {
     useEffect(()=>{
         setMinute(storeMinute);
         setSecond(storeSecond);
+        setUserSelectedColor(color);
     }, [storeMinute, storeSecond]);
 
     const timerHandler = (e: React.MouseEvent) => {
