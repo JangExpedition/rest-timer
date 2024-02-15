@@ -24,7 +24,7 @@ const Timer = () => {
     useEffect(()=>{
         setMinute(storeMinute);
         setSecond(storeSecond);
-    }, []);
+    }, [storeMinute, storeSecond]);
 
     const timerHandler = (e: React.MouseEvent) => {
         const target = e.target as HTMLDivElement;
