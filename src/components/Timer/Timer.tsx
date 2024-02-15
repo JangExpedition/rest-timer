@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./Timer.module.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { setMinute, setSecond } from "../../slice/timeSlice.ts";
 import { backgroundChange, change } from "../../slice/colorSlice.ts";
 
 const Timer = () => {
