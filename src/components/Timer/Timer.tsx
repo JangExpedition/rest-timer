@@ -24,7 +24,7 @@ const Timer = () => {
         setMinute(storeMinute);
         setSecond(storeSecond);
         setUserSelectedColor(color);
-    }, [storeMinute, storeSecond]);
+    }, [storeMinute, storeSecond, color]);
 
     const timerHandler = (e: React.MouseEvent) => {
         const target = e.target as HTMLDivElement;
