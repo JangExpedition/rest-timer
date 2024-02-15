@@ -15,7 +15,7 @@ const Timer = () => {
 
     const [minute, setMinute] = useState("");
     const [second, setSecond] = useState("");
-    const [userSelectedColor, setUserSelectedColor] = useState(color);
+    let userSelectedColor: string = "";
     const [timerId, setTimerId] = useState<NodeJS.Timeout | number>(0);
 
     const startBtn = useRef<HTMLDivElement>(null);
@@ -23,7 +23,7 @@ const Timer = () => {
     useEffect(()=>{
         setMinute(storeMinute);
         setSecond(storeSecond);
-        setUserSelectedColor(color);
+        userSelectedColor = color;
     }, [storeMinute, storeSecond, color]);
 
     const timerHandler = (e: React.MouseEvent) => {
