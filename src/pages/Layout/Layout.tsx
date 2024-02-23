@@ -1,9 +1,9 @@
 import React from "react"
 import {Outlet} from "react-router-dom"
-import Header from "../../components/Header/Header.tsx"
-import Wrapper from "./Wrapper.tsx"
+import Header from "../../components/Header/Header"
+import Wrapper from "./Wrapper"
 import { useSelector } from "react-redux"
-import { RootState } from "../../store/store.ts"
+import { RootState } from "../../store/store"
 
 const Layout = () => {
 

@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./Palette.module.scss"
 import { useDispatch } from "react-redux";
-import { backgroundChange, change } from "../../slice/colorSlice.ts";
+import { backgroundChange, change } from "../../slice/colorSlice";
 
-const paletteColor = ["black", "white", "red", "orange", "yellow", "green", "blue", "indigo", "purple"];
+type paletteColorType = ["black", "white", "red", "orange", "yellow", "green", "blue", "indigo", "purple"];
+const paletteColor: paletteColorType = ["black", "white", "red", "orange", "yellow", "green", "blue", "indigo", "purple"];
 
-const Palette = ({type}) => {
+const Palette = ({type}: {type: string}) => {
 
     const dispatch = useDispatch();
-    const clickHandler = (color) => {
+    const clickHandler = (color: string) => {
         type === "color" ? dispatch(change(color)) : dispatch(backgroundChange(color));
     }
 

@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "./Timer.module.scss"
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
-import { backgroundChange, change } from "../../slice/colorSlice.ts";
+import { backgroundChange, change } from "../../slice/colorSlice";
+import { changeTimerString } from "../../utils/utils";
 
 const Timer = () => {
 
@@ -47,10 +48,10 @@ const Timer = () => {
             setSecond((prevSecond)=>{
                 if(isReverse){
                     if(prevSecond === "59"){
-                        setMinute(String(Number(minute) + 1).padStart(2, "0"));
+                        setMinute(changeTimerString(Number(minute) + 1));
                         return "00";
                     }else{
-                        return String(Number(prevSecond) + 1).padStart(2, "0");
+                        return changeTimerString(Number(prevSecond) + 1);
                     }
                 }else{
                     if(prevSecond === "00"){
@@ -60,12 +61,11 @@ const Timer = () => {
                             isReverse = true;
                             return "01";
                         }else{
-                            setMinute(String(Number(minute) - 1).padStart(2, "0"));
+                            setMinute(changeTimerString(Number(minute) + 1));
                             return "59";
                         }
                     }else{
-                        const num = Number(prevSecond) - 1;
-                        return String(num).padStart(2, "0");
+                        return changeTimerString(Number(prevSecond) + 1);
                     }
                 }
             })

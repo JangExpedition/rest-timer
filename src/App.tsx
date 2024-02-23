@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
-import Layout from './pages/Layout/Layout.tsx';
-import Main from './pages/Main/Main.tsx'
-import Setting from './pages/Setting/Setting.tsx';
+import Layout from './pages/Layout/Layout';
+import Main from './pages/Main/Main'
+import Setting from './pages/Setting/Setting';
 
 function App() {
   const rootElement = useRoutes([

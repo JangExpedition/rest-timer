@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Setting.module.scss"
-import Palette from "../../components/Palette/Palette.tsx";
-import SetTimer from "../../components/SetTimer/SetTimer.tsx";
+import Palette from "../../components/Palette/Palette";
+import SetTimer from "../../components/SetTimer/SetTimer";
 
 const Setting = () => {
     return <div className={styles.Setting}>

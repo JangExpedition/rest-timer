@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { changeTimerString } from "../../src/utils/utils";
 
 const timeSlice = createSlice({
     name: "time",
@@ -8,12 +9,12 @@ const timeSlice = createSlice({
     },
     reducers: {
         setMinute: (state, action) => {
-            const minute = String(action.payload).padStart(2, "0");
+            const minute = changeTimerString(action.payload);
             const result = {...state, minute};
             return result
         },
         setSecond: (state, action) => {
-            const second = String(action.payload).padStart(2, "0");
+            const second = changeTimerString(action.payload);
             const result = {...state, second};
             return result
         },

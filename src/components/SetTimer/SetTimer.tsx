@@ -1,21 +1,23 @@
 import React from "react";
 import styles from "./SetTimer.module.scss"
 import { useDispatch } from "react-redux";
-import { setMinute, setSecond } from "../../slice/timeSlice.ts";
+import { setMinute, setSecond } from "../../slice/timeSlice";
 
 const SetTimer = () => {
     const dispatch = useDispatch();
 
-    const timeHandler = (e) => {
-        let value = e.target.value;
-        const id = e.target.id;
+    const timeHandler = (e: React.ChangeEvent) => {
+        const target = e.target as HTMLInputElement;
+
+        let value = Number(target.value);
+        const id = target.id;
 
         if(value < 0){
             value = 0;
-            e.target.value = value;
+            target.value = String(value);
         }else if(value > 59){
             value = 59;
-            e.target.value = value;
+            target.value = String(value);
         }
 
         if(id === "minute"){
