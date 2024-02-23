@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header"
 import Wrapper from "./Wrapper"
 import { useSelector } from "react-redux"
 import { RootState } from "../../store/store"
+import Footer from "../../components/Footer/Footer"
 
 const Layout = () => {
 
@@ -16,6 +17,7 @@ const Layout = () => {
             <Wrapper className="main">
                 <Outlet/>
             </Wrapper>
+            <Footer/>
         </div>
     )
 }

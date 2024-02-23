@@ -1,0 +1,10 @@
+@use "@styles/" as *;
+
+.Footer{
+    width: 100%;
+    height: $header-height;
+    padding: 0 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
