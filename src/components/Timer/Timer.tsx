@@ -95,7 +95,7 @@ const Timer = () => {
                 :
                 <input id="second" type="text" onChange={(e)=>editTime(e)} value={isEdit ? storeSecond : displaySec} readOnly={!isEdit}></input>
         </div>
-        <div className={styles.buttonWrapper}>
+        <div className={styles.buttonWrapper} style={isEdit ? {visibility: "hidden"} : {}}>
             <div className={styles.stopBtn} 
                     onClick={()=>{resetTimer()}}>정지</div>
             <div className={`${styles.startBtn} ${isStart ? styles.start : ""}`} 
