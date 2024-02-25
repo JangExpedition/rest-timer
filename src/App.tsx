@@ -1,20 +1,22 @@
-import React from 'react';
-import { useRoutes } from 'react-router-dom';
-import Layout from './pages/Layout/Layout';
-import Main from './pages/Main/Main'
-import Setting from './pages/Setting/Setting';
+import React, { useEffect } from 'react';
+import Timer from './components/Timer/Timer';
+import Footer from './components/Footer/Footer';
+import { useSelector } from 'react-redux';
+import { RootState } from './store/store';
 
 function App() {
-  const rootElement = useRoutes([
-    {
-      element: <Layout/>,
-      children: [
-        {path: "/", element: <Main/>},
-        {path: "/setting", element: <Setting/>}
-      ]
-    }
-  ])
-  return rootElement;
+
+  const isTimeOver = useSelector((state: RootState)=>state.time.isTimeOver);
+
+  useEffect(()=>{
+    console.log(isTimeOver);
+  }, [isTimeOver])
+
+  return <div className='App' 
+              style={isTimeOver ? {color: "black", background: "white"} : {color: "white", backgroundColor: "black"}}>
+    <Timer/>
+    <Footer/>
+  </div>
 }
 
 export default App;

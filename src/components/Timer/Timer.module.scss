@@ -4,33 +4,49 @@
     @include center-box;
     flex-direction: column;
     width: 100%;
-    height: 80%;
+    height: 100%;
     @include mobile{
         gap: 1rem;
     }
-    .time{
+    .timeWrapper{
+        width: 100%;
+        @include center-box;
         @include mobile{
-            font-size: 6rem;
+            font-size: 7rem;
         }
         @include desktop{
             font-size: 15rem;
         }
+        input{
+            color: inherit;
+            background-color: inherit;
+            width: 40vw;
+            height: 100%;
+            border: none;
+            font-size: inherit;
+            text-align: center;
+            font-weight: bold;
+        }
     }
     .buttonWrapper{
-        @include center-box;
-        gap: 3rem;
-        .startAndStop{
-            @include mobile{
-                @include box(3rem);
-                font-size: 0.7rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        .startBtn{
+            @include button;
+            background-color: $blue;
+            color: $light-blue;
+            &.start{
+                background-color: $orange;
+                color: $light-orange;
             }
-            @include desktop{
-                @include box(5rem);
-            }
-            @include center-box;
-            font-weight: bold;
-            border-radius: 50%;
-            cursor: pointer;
+        }
+        .stopBtn{
+            @include button;
+            background-color: $grey;
+            color: $white;
         }
     }
 }

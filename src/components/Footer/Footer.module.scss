@@ -2,9 +2,26 @@
 
 .Footer{
     width: 100%;
-    height: $header-height;
-    padding: 0 2rem;
+    height: $footer-height;
     position: fixed;
-    top: 0;
+    top: calc(100vh - $footer-height);
     left: 0;
+    @include center-box;
+    div{
+        width: 50%;
+        height: 100%;
+        @include center-box;
+        flex-direction: column;
+        background-color: $grey;
+        text-decoration: none;
+        cursor: pointer;
+        &.active{
+            color: $blue;
+            background-color: inherit;
+        }
+        *{
+            color: inherit;
+            background-color: inherit;
+        }
+    }
 }
